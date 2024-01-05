@@ -21,20 +21,20 @@ def embed_files(html_file, css_file, js_file, output_file):
 
     if head_index != -1:
         # Insert CSS content into the HTML file
-        modified_html = html_content[:head_index] + f'\n<style>{css_content}</style>\n' + html_content[head_index:]
+        modified_html = html_content[:head_index] + f'\n<style>\n{css_content}</style>\n' + html_content[head_index:]
     else:
         # If </head> tag is not found, append the CSS content at the end
-        modified_html = html_content + f'\n<style>{css_content}</style>\n'
+        modified_html = html_content + f'\n<style>\n{css_content}</style>\n'
 
     # Find the position to insert JS content in the HTML file
     body_index = modified_html.lower().find('</body>')
 
     if body_index != -1:
         # Insert JS content into the HTML file
-        modified_html = modified_html[:body_index] + f'\n<script>{js_content}</script>\n' + modified_html[body_index:]
+        modified_html = modified_html[:body_index] + f'\n<script>\n{js_content}</script>\n' + modified_html[body_index:]
     else:
         # If </body> tag is not found, append the JS content at the end
-        modified_html = modified_html + f'\n<script>{js_content}</script>\n'
+        modified_html = modified_html + f'\n<script>\n{js_content}</script>\n'
 
     # Write the modified HTML content to the output file
     with open(output_file, 'w') as output_file:
