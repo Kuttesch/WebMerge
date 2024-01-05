@@ -18,8 +18,6 @@ cd webmerge
 
 ## Usage
 
-## Usage
-
 WebMerge is a command-line tool that takes four arguments: the source HTML file, the source CSS file, the source JavaScript file, and the output file.
 
 Here's an example of how to use it:
