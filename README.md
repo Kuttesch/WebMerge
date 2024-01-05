@@ -6,6 +6,7 @@ WebMerge is a powerful tool that allows you to merge your HTML, CSS, and JavaScr
 
 - [Installation](#installation)
 - [Usage](#usage)
+- [Known Bugs](#bugs)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -32,6 +33,11 @@ In this example:
 - `D:/Folder/prod/prod.html` is the path where the output file will be created.
 
 The tool reads the HTML, CSS, and JavaScript files, merges them into a single HTML file, and writes the result to the output file.
+
+## Bugs
+
+- ```-info``` currently not working
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
