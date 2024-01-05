@@ -18,9 +18,22 @@ cd webmerge
 
 ## Usage
 
-```bash
-python webmerge.py D:/Folder/src index.html styles.css script.js D:/Folder/prod/output.html
-```
+## Usage
+
+WebMerge is a command-line tool that takes four arguments: the source HTML file, the source CSS file, the source JavaScript file, and the output file.
+
+Here's an example of how to use it:
+```Bash
+python webmerge.py D:/Folder/src/index.html D:/Folder/src/styles.css D:/Folder/src/script.js D:/Folder/prod/prod.html
+````
+In this example:
+
+- `D:/Folder/src/index.html` is the path to the source HTML file.
+- `D:/Folder/src/styles.css` is the path to the source CSS file.
+- `D:/Folder/src/script.js` is the path to the source JavaScript file.
+- `D:/Folder/prod/prod.html` is the path where the output file will be created.
+
+The tool reads the HTML, CSS, and JavaScript files, merges them into a single HTML file, and writes the result to the output file.
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
