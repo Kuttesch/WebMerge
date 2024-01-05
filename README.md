@@ -1,4 +1,4 @@
-# WebMerge# WebMerge
+# WebMerge
 
 WebMerge is a powerful tool that allows you to merge your HTML, CSS, and JavaScript files into a single HTML file.
 
