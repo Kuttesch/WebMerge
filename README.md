@@ -36,7 +36,7 @@ The tool reads the HTML, CSS, and JavaScript files, merges them into a single HT
 
 ## Bugs
 
-- ```-info``` currently not working
+
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
