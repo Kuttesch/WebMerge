@@ -41,15 +41,12 @@ def embed_files(html_file, css_file, js_file, output_file):
         output_file.write(modified_html)
 
 def main():
-    parser = argparse.ArgumentParser(description='Merge HTML, CSS, and JS files into an HTML file.')
-    parser.add_argument('source_directory', type=str, help='Source directory containing HTML, CSS, and JS files')
-    parser.add_argument('html_file', type=str, help='HTML file name')
-    parser.add_argument('css_file', type=str, help='CSS file name')
-    parser.add_argument('js_file', type=str, help='JavaScript file name')
-    parser.add_argument('output_file', type=str, help='Output HTML file name')
-    parser.add_argument('-info', '--info', action='help', default=argparse.SUPPRESS,
-                        help='Show this help message and exit')
-
+    parser = argparse.ArgumentParser(description='Merge files.')
+    parser.add_argument('source_directory', nargs='?', default='default_source_directory', help='Source directory')
+    parser.add_argument('html_file', nargs='?', default='default_html_file', help='HTML file')
+    parser.add_argument('css_file', nargs='?', default='default_css_file', help='CSS file')
+    parser.add_argument('js_file', nargs='?', default='default_js_file', help='JS file')
+    parser.add_argument('output_file', nargs='?', default='default_output_file', help='Output file')
     args = parser.parse_args()
 
     # Construct full paths for files
@@ -57,10 +54,9 @@ def main():
     html_file = os.path.join(source_directory, args.html_file)
     css_file = os.path.join(source_directory, args.css_file)
     js_file = os.path.join(source_directory, args.js_file)
-    output_file = os.path.join(source_directory, args.output_file)
 
     # Call the embed_files function with the provided file paths
-    embed_files(html_file, css_file, js_file, output_file)
+    embed_files(html_file, css_file, js_file, args.output_file)
 
 if __name__ == "__main__":
     main()
